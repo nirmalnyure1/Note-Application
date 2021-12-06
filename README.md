@@ -15,7 +15,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-#Note Application 
+# Note Application 
 a simple note application in flutter| Dart 
-#Database :SQLite
-#StateManagement: Provider
+# Database :SQLite
+# StateManagement: Provider
