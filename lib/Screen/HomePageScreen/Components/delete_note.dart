@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/Constant/textstyle.dart';
-import 'package:note_app/State/home_page_provider.dart';
+import 'package:note_app/State/homepage_state.dart';
+
 
 class DeleteNote extends StatelessWidget {
-  HomePageProvider state;
+  HomePageState state;
   int index;
   BuildContext context;
   DeleteNote({required this.context, required this.state, required this.index});
-  delete(HomePageProvider state, int index) {
+  delete(HomePageState state, int index) {
     showDialog(
       context: context,
       builder: (context) {

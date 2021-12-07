@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/State/home_page_provider.dart';
+import 'package:note_app/State/homepage_state.dart';
 
 class AddNote extends StatelessWidget {
   AddNote({required this.state, required this.context});
-  HomePageProvider state;
+  HomePageState state;
+
   BuildContext context;
   TextEditingController titleController = TextEditingController();
   TextEditingController descController = TextEditingController();
-  addNote(HomePageProvider state) {
+  addNote(HomePageState state) {
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
-          content: Container(
+          content: SizedBox(
             height: 220,
             child: Column(
               children: [

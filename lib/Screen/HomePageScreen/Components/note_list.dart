@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/Model/note_model.dart';
-import 'package:note_app/State/home_page_provider.dart';
-import 'package:note_app/screen/HomePage/Components/delete_note.dart';
-import 'package:note_app/screen/HomePage/Components/share_note.dart';
-import 'package:note_app/screen/HomePage/Components/update_note.dart';
+import 'package:note_app/Screen/HomePageScreen/Components/share_note.dart';
+import 'package:note_app/Screen/HomePageScreen/Components/update_note.dart';
+import 'package:note_app/State/homepage_state.dart';
+
+import 'delete_note.dart';
+
 
 class NoteList extends StatelessWidget {
   final NoteModel data;
-  final HomePageProvider state;
+  final HomePageState state;
   // final Function update;
   // final Function delete;
   final int index;

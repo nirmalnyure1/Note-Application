@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/State/home_page_provider.dart';
-import 'package:note_app/screen/HomePage/Components/add_note.dart';
-import 'package:note_app/screen/HomePage/Components/note_list.dart';
+import 'package:note_app/Screen/HomePageScreen/Components/add_note.dart';
+import 'package:note_app/Screen/HomePageScreen/Components/note_list.dart';
+import 'package:note_app/State/homepage_state.dart';
+
 import 'package:provider/provider.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageScreen extends StatefulWidget {
+  const HomePageScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageScreen> createState() => _HomePageScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
-  // TextEditingController titleController = TextEditingController();
-  // TextEditingController descController = TextEditingController();
-
+class _HomePageScreenState extends State<HomePageScreen> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Provider.of<HomePageProvider>(context, listen: false).init();
+    Provider.of<HomePageState>(context, listen: false).init();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<HomePageProvider>(
+    return Consumer<HomePageState>(
       builder: (BuildContext context, state, Widget? child) {
         return Scaffold(
           appBar: AppBar(

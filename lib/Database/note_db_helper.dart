@@ -44,16 +44,15 @@ class DatabaseHelper {
         '''CREATE TABLE $tableName ($idd INTEGER PRIMARY KEY AUTOINCREMENT  ,  $title TEXT, $desc TEXT)''');
   }
 
-  Future<bool> insertData(NoteModel note) async {
+  Future<void> insertData(NoteModel note) async {
     final dbClient = await instance.db;
     await dbClient!.insert(tableName, note.toMap());
-
-    return true;
   }
 
   Future<List<NoteModel>> getData() async {
     final dbClient = await instance.db;
     final List<Map<String, dynamic>> data = await dbClient!.query(tableName);
+    print(data);
     return data.map((e) => NoteModel.fromMap(e)).toList();
   }
 

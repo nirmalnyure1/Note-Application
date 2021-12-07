@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/Constant/textstyle.dart';
-import 'package:note_app/State/home_page_provider.dart';
+import 'package:note_app/State/homepage_state.dart';
+
 import 'package:share_plus/share_plus.dart';
 
 class ShareNote extends StatelessWidget {
-  HomePageProvider state;
+  HomePageState state;
   int index;
   BuildContext context;
   ShareNote({required this.state, required this.index, required this.context});

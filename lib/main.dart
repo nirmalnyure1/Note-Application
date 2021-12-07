@@ -1,8 +1,8 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:note_app/State/home_page_provider.dart';
-import 'package:note_app/screen/HomePage/home_page.dart';
+import 'package:note_app/Screen/HOMEPAGESCREEN/homepage_screen.dart';
+import 'package:note_app/State/homepage_state.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,14 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => HomePageProvider())],
+      providers: [ChangeNotifierProvider(create: (_) => HomePageState())],
       child: MaterialApp(
         useInheritedMediaQuery: true,
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primarySwatch: Colors.deepPurple),
-        home: const HomePage(),
+        home: const HomePageScreen(),
       ),
     );
   }

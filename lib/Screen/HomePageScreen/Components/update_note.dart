@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/Constant/textstyle.dart';
-import 'package:note_app/State/home_page_provider.dart';
+import 'package:note_app/State/homepage_state.dart';
+
 
 class UpdateNote extends StatelessWidget {
-  HomePageProvider state;
+  HomePageState state;
   BuildContext context;
   int index;
   UpdateNote({required this.state, required this.context, required this.index});
-  updateNote(HomePageProvider state, int index) {
+  updateNote(HomePageState state, int index) {
     showDialog(
       context: context,
       builder: (context) {
