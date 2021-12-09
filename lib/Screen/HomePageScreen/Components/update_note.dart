@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:note_app/Constant/textstyle.dart';
 import 'package:note_app/State/homepage_state.dart';
 
-
 class UpdateNote extends StatelessWidget {
   HomePageState state;
   BuildContext context;
@@ -34,16 +33,18 @@ class UpdateNote extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 5),
-                  child: TextFormField(
-                    maxLines: 5,
-                    controller: descController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      hintText: "Description",
-                      hintStyle: const TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 14,
+                  child: Flexible(
+                    child: TextFormField(
+                      maxLines: 4,
+                      controller: descController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        hintText: "Description",
+                        hintStyle: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ),
